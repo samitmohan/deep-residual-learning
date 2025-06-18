@@ -1,0 +1,6 @@
+__pycache__/
+data/
+models/
+runs/
+*.npy
+*.tar.gz
