@@ -4,3 +4,6 @@ models/
 runs/
 *.npy
 *.tar.gz
+data/
+*.tar.gz
+
