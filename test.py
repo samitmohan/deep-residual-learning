@@ -6,6 +6,7 @@ import models
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
+
 # original paper batchsize was 128 but i dont have gpu :p
 def dimension_test(model, n, in_dims: tuple, out_size, batch_size=16):
     def case(residual, option):

@@ -96,3 +96,5 @@ Use a convolutional layer with 1x1 kernels and stride 2 to linearly project the 
 Use the linear projections described in Option B for every shortcut, not just those that down sample. This introduces more trainable parameters, which [1] argues to be the reason that Option C marginally outperforms Option B
 
 Graphs:
+
+[Graph](graph.png)

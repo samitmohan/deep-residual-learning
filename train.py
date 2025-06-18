@@ -23,9 +23,9 @@ parser = argparse.ArgumentParser()
 parser.add_argument('n', type=int, choices=(20, 32, 44, 56, 110))
 parser.add_argument('-r', '--residual', action='store_true')
 parser.add_argument('-o', '--option', type=str, choices=('A', 'B'), default=None)
+parser.add_argument('--quick', action='store_true', help='Run only 5 epochs for debugging')
 args = parser.parse_args()
 large = args.n >= 56
-parser.add_argument('--quick', action='store_true', help='Run only 5 epochs for debugging')
 
 writer = SummaryWriter()
 now = datetime.now()

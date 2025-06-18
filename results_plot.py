@@ -65,9 +65,9 @@ def plan_vs_residual(show=False, output_dir='plots_resnet'):
     fig, ax = plt.subplots(1, 1, figsize=(10, 6)) # Increased figure size for better readability
     
     info = [
-        ('models/CifarResNet-20-P/03_06_2022/19_13_20', 'Plain-20', 'darkorange'),
-        ('models/CifarResNet-20-R-A/03_06_2022/20_20_51', 'Residual-A', 'purple'),
-        ('models/CifarResNet-20-R-B/03_07_2022/19_58_56', 'Residual-B', 'violet')
+        ('models/CifarResNet-20-P-N/06_18_2025/14_58_40', 'Plain-20', 'darkorange'),
+        ('models/CifarResNet-20-R-A/06_18_2025/15_01_15', 'Residual-A', 'purple'),
+        ('models/CifarResNet-20-R-B/06_18_2025/15_03_46', 'Residual-B', 'violet')
     ]
     plot_errors(ax, info)
     ax.set_title('Plain vs. Residual Network Performance') # Add a title
@@ -81,9 +81,9 @@ def plain_vs_residual_table(show=False, output_dir='plots_resnet'):
     fig, ax = plt.subplots(figsize=(8, 3))
 
     info_for_table = [
-        ('models/CifarResNet-20-P/03_06_2022/19_13_20',     'Plain-20'),
-        ('models/CifarResNet-20-R-A/03_06_2022/20_20_51',   'Residual-A'),
-        ('models/CifarResNet-20-R-B/03_07_2022/19_58_56',   'Residual-B')
+        ('models/CifarResNet-20-P-N/06_18_2025/14_58_40',     'Plain-20'),
+        ('models/CifarResNet-20-R-A/06_18_2025/15_01_15',     'Residual-A'),
+        ('models/CifarResNet-20-R-B/06_18_2025/15_03_46',     'Residual-B')
     ]
     
     table_data = []
@@ -124,10 +124,10 @@ def side_by_side(show=False, output_dir='plots_resnet'):
     # Format for left plot (Plain models)
     plain_sizes = (20, 32, 44, 56)
     plain_paths = (
-        'models/CifarResNet-20-P/03_06_2022/19_13_20',
-        'models/CifarResNet-32-P/03_06_2022/22_03_09',
-        'models/CifarResNet-44-P/03_07_2022/17_48_36',
-        'models/CifarResNet-56-P/03_08_2022/09_49_18'
+        'models/CifarResNet-20-P-N/06_18_2025/14_58_40',
+        'models/CifarResNet-32-P-N/06_18_2025/15_06_20',
+        'models/CifarResNet-44-P-N/06_18_2025/15_15_41',
+        'models/CifarResNet-56-P-N/06_18_2025/15_26_46'
     )
     colors_plain = ('darkorange', 'blue', 'red', 'green')
     info_plain = zip(plain_paths, [f'Plain-{x}' for x in plain_sizes], colors_plain)
@@ -136,10 +136,10 @@ def side_by_side(show=False, output_dir='plots_resnet'):
 
     # Format for right plot (Residual models - Option A)
     residual_paths = (
-        'models/CifarResNet-20-R-A/03_06_2022/20_20_51',
-        'models/CifarResNet-32-R-A/03_06_2022/23_27_14',
-        'models/CifarResNet-44-R-A/03_07_2022/21_10_40',
-        'models/CifarResNet-56-R-A/03_08_2022/14_36_35'
+        'models/CifarResNet-20-R-A/06_18_2025/15_01_15',
+        'models/CifarResNet-32-R-A/06_18_2025/15_09_23',
+        'models/CifarResNet-44-R-A/06_18_2025/15_19_18',
+        'models/CifarResNet-56-R-A/06_18_2025/15_31_02'
     )
     colors_residual = ('purple', 'cyan', 'magenta', 'lime') # Different colors for distinction
     info_residual = zip(residual_paths, [f'Res-A {x}' for x in plain_sizes], colors_residual)
