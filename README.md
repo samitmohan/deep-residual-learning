@@ -1,15 +1,17 @@
+# Deep Residual Learning for Image Recognition: A Pytorch Implementation
 
-Deep Residual Learning for Image Recognition: A Pytorch Implementation
-This is a PyTorch implementation of the residual network model in [Deep Residual Learning for Image Recognition]((https://arxiv.org/abs/1512.03385)) (Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun arxiv, 2015).
+This is a PyTorch implementation of the residual network model in "[Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)" (Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun arxiv, 2015).
 
 ![Arch](arch.png)
 
 When deeper networks are able to start converging, a degradation problem has been exposed: with the network depth increasing, accuracy gets saturated (which might be unsurprising) and then degrades rapidly. 
+
 Unexpectedly, such degradation is not caused by overfitting, and adding more layers to a suitably deep model leads to higher training error, as reported in [11, 42] and thoroughly verified by our experiments.
 
 In this paper, we address the degradation problem by introducing a deep residual learning framework. Instead of hoping each few stacked layers directly fit a desired underlying mapping, we explicitly let these layers fit a residual mapping. 
 
 Formally, denoting the desired underlying mapping as H(x), we let the stacked nonlinear layers fit another mapping of F(x) := H(x)−x. The original mapping is recast into F(x)+x. 
+
 
 We hypothesize that it is easier to optimize the residual mapping than to optimize the original, unreferenced mapping. To the extreme, if an identity mapping were optimal, it would be easier to push the residual to zero than to fit an identity mapping by a stack of nonlinear layers.
 
